@@ -40,9 +40,9 @@ module.exports = {
           'custom' : '#e30022',
         },
         gray: {
-          'dark' : '#0F0F0F',
+          'dark' : '#090909',
           'medium' : '#1C1D21',
-          'light' : '#252425',
+          'light' : '#535253',
         },
 
         black: {
