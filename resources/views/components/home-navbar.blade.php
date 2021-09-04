@@ -1,5 +1,5 @@
 <nav class="xl:py-2 ">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
+    <div class="w-10/12 mx-auto px-2 sm:px-6 lg:px-8 ">
         <div class="relative flex items-center justify-between h-16">
             {{-- pro mobil --}}
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -27,11 +27,11 @@
 
                         <a href="{{ route('home') }}" class="{{ active(['/']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Úvod</a>
         
-                        <a href="{{ route('home-galerie') }}" class="{{ active(['/galerie', '/galerie/*']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Galerie</a>
+                        <a href="{{ route('home-galerie') }}" class="{{ active(['galerie', '/galerie/*']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Galerie</a>
         
-                        <a href="{{ route('home-cenik') }}" class="{{ active(['/cenik', '/cenik/*']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Ceník</a>
+                        <a href="{{ route('home-cenik') }}" class="{{ active(['cenik', '/cenik/*']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Ceník</a>
         
-                        <a href="{{ route('home-kontakt') }}" class="{{ active(['/kontakt', '/kontakt*']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Kontakt</a>
+                        <a href="{{ route('home-kontakt') }}" class="{{ active(['kontakt', '/kontakt*']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Kontakt</a>
 
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="flex items-center">
                         <h1 class="sm:text-xs lg:text-base font-montserrat text-gray-300 font-medium">+420 730 681 670</h1>
 
-                        <div class="flex flex-col pl-5">
+                        <div class="hidden md:flex flex-col pl-5 ">
                             <div class="bg-gray-500 bg-gradient-to-br hover:from-purple-700 hover:to-pink-400 rounded-full my-1">
                                 <a href="">
                                     <img class="sm:w-5 sm:h-5" src="{{ asset('img/socialmedia/instagram.png') }}">

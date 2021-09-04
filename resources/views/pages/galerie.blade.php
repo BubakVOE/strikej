@@ -14,7 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet">
     
 </head>
-<body>
+<body class="bg-gray-light">
     
+    <div class="bg-gray-old ">
+        <x-home-navbar/>
+    </div>
+
+
+
+
+
 </body>
 </html>
