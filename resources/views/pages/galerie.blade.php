@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet">
     
 </head>
-<body class="bg-gray-light ">
+<body class="bg-gray-light xl:h-screen">
     
     <div class="bg-gray-old ">
         <x-home-navbar/>
@@ -22,16 +22,16 @@
 
 
 
-    <div class="w-10/12 m-auto my-1/12">
-        <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8 bg-gray-medium">
+    <div class="h-11/12 w-11/12 lg:w-10/12 mx-auto flex items-center my-4 xl:my-0 ">
+        <div class="py-16 px-4 sm:py-24 sm:px-6 lg:px-8 w-full bg-gray-medium">
             <h2 class="text-2xl font-extrabold tracking-tight text-white font-poppins border-b-2 border-white">2021</h2>
         
-                <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                    
-                    <x-galerie-car/>
-            
-                </div>
+            <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                
+                <x-galerie-car/>
+        
             </div>
+        </div>
     </div>
 
 

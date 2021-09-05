@@ -25,7 +25,7 @@
                 <div class="hidden sm:block sm:ml-6  w-full ">
                     <div class="flex justify-evenly space-x-2 items-center xl:h-full xl:w-5/12 xl:m-auto py-3 ">
 
-                        <a href="{{ route('home') }}" class="{{ active(['/']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Úvod</a>
+                        <a href="{{ route('home') }}" class="{{ active(['/']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Domů</a>
         
                         <a href="{{ route('home-galerie') }}" class="{{ active(['galerie', '/galerie/*']) }} font-montserrat text-red-500 hover:bg-gray-medium hover:text-red-300 px-3 py-2 rounded-md text-lg font-medium">Galerie</a>
         
@@ -66,7 +66,7 @@
 <!-- Mobile menu, show/hide based on menu state. -->
     <div class="sm:hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="{{ route('home') }}" class="font-montserrat text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Galerie</a>
+            <a href="{{ route('home') }}" class="font-montserrat text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Domů</a>
     
             <a href="{{ route('home-galerie') }}" class="font-montserrat text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Galerie</a>
     

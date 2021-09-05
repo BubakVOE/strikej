@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+
 
 class PagesController extends Controller
 {
@@ -14,7 +16,12 @@ class PagesController extends Controller
     
     public function galerie()
     {
-        return view('pages.galerie');
+
+        $thumbnails = Post::all();
+
+        return view('pages.galerie', [
+            'thumbnails' => $thumbnails,
+        ]);
     }
 
 

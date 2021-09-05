@@ -12,24 +12,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet">
-    
+     
 </head>
-<body class="bg-gray-light h-screen ">
+<body class="bg-gray-light xl:h-screen ">
 
     <div class="bg-gray-old ">
         <x-home-navbar/>
     </div>
 
-
-
     <div class="h-11/12 w-11/12 lg:w-10/12 mx-auto flex items-center">
-        <div class="flex justify-between items-center flex-col h-10/12 w-full xl:flex-row xl:space-x-2  ">
+        <div class="flex justify-between items-center flex-col h-10/12 w-full xl:flex-row space-y-4 my-4 xl:my-0 xl:space-y-0 xl:space-x-2  ">
         {{-- servis --}}
             <div class="relative h-full w-full xl:w-6/12 bg-gray-medium rounded-lg p-3">
                 <div class="text-center flex justify-center xl:justify-start space-x-2 p-2">
                     <h1 class="text-xl font-bold font-poppins text-white border-b-2 border-white w-16 ">Servis</h1>
                 </div>
-                                 
+                                    
                 <div class="flex justify-center my-4 xl:my-10  ">
                     <img class="w-24 lg:w-2/12 xl:w-8/12" src="{{ asset('img/kontakt/location.png') }}" >
                 </div>
@@ -51,7 +49,6 @@
             </div>
 
         {{-- formulář --}}
-
             <div class="flex justify-center w-full xl:h-full bg-gray-medium rounded-lg p-3">
                 <div class=" md:mt-0 md:col-span-2 ">
 
@@ -202,6 +199,8 @@
             </div>
         </div>
     </div>
+
+    <x-footer/>
 
 
 

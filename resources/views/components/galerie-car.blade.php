@@ -3,9 +3,8 @@
         <img src="{{ asset('img/introduction/wheel.png') }}" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
     </div>
 
-    <hr class="border border-gray-old my-2">
 
-    <div class=" text-center space-y-1 ">
+    <div class=" text-center space-y-1 bg-gray-old py-2 ">
         <h3 class="text-sm text-gray-700">
             <a href="#">
                 <span aria-hidden="true" class="absolute inset-0  "></span>

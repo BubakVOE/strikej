@@ -21,12 +21,12 @@
     </div>
 
     
-    <section class="my-32">
-        <div class="my-10">
+    <section class="my-10 xl:my-32">
+        <div class="xl:my-10">
             <x-home-introduction/>
         </div>
     
-        <div class="mt-28">
+        <div class="mt-10 xl:mt-28">
             <x-home-offers/>
         </div>
     </section>
