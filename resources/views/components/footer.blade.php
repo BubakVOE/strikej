@@ -1,5 +1,5 @@
 <div class="bg-gray-old">
-    <footer class="py-12 w-8/12 m-auto">
+    <footer class="py-5 w-8/12 m-auto">
         <div class="container flex justify-center items-center flex-wrap ">
 
             <div class="flex flex-wrap w-full  lg:w-10/12  ">

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reservation;
-use Illuminate\Http\Request;
 use App\Http\Requests\ReservationRequest;
-use App\Models\Post;
+use Illuminate\Support\Facades\Request;
 
 class ReservatorController extends Controller
 {
@@ -15,9 +14,8 @@ class ReservatorController extends Controller
         $res = Reservation::create([
             'firstName' => $request->input('firstName'),
             'lastName' => $request->input('lastName'),
-            'mobile' => $request->input('mobile'),
-            'datum' => $request->input('datum'),
             'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
             'car' => $request->input('car'),
             'type' => $request->input('type'),
         ]);

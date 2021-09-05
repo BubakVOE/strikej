@@ -57,7 +57,7 @@
                         <h1 class="text-white">Pro příhlašení vozidla</h1> 
                     </div>
 
-                    <form  action="#" method="POST" class="overflow-hidden sm:rounded-md ">
+                    <form  action="{{ route('reservation') }}" method="POST" class="overflow-hidden sm:rounded-md ">
 
                         @csrf
 
@@ -85,7 +85,9 @@
                                             id="lastName" 
                                             autocomplete="family-name" 
                                             placeholder="Novák"
-                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block lg:w-11/12 m-auto sm:text-sm border-gray-300 rounded-md">
+                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block lg:w-11/12 m-auto sm:text-sm border-gray-300 rounded-md
+                                            @error('lastName')  @enderror
+                                            ">
                                 </div>
                 
                                 <div class="col-span-6 sm:col-span-6 lg:w-8/12 ">
@@ -105,11 +107,11 @@
                                         <h1>telefonní číslo <span class="text-red-custom text-lg">*</span></h1>
                                     </label>
                                     <input type="text" 
-                                    name="phone" 
-                                    id="phone" 
-                                    autocomplete="phone"
-                                    placeholder="730681670" 
-                                    class="mt-1 focus:ring-indigo-500 lg:text-center focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                            name="phone" 
+                                            id="phone" 
+                                            autocomplete="phone"
+                                            placeholder="730681670" 
+                                            class="mt-1 focus:ring-indigo-500 lg:text-center focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
     
                                 </div>
 
@@ -142,11 +144,41 @@
                             </div>
                         </div>
 
-                        <div class="text-center">
+                        <div class="text-center relative ">
+
+
+                            @if (session()->has('message'))
+                                <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
+                                    <h1 class="text-gray-50 bg-green-500 rounded-2xl py-1 px-2">
+                                        {{ session()->get('message') }}
+                                    </h1>
+                                </div>
+                            
+                            @else
+                                <div class="text-center">
+                                    <button type="submit" class="py-1 px-4 text-base font-medium rounded-md text-black-custom bg-red-custom hover:bg-black-custom hover:text-red-custom md:py-4 md:text-lg md:px-10 transition duration-300">
+                                        Odeslat
+                                    </button>
+                                </div>
+                            @endif
+
+
+                            @if ($errors->any())
+                                <div >
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                        </div>
+
+                        {{-- <div class="text-center">
                             <button type="submit" class="py-2 px-4 border-transparent text-base font-medium rounded-md text-black-custom bg-red-custom border-2  hover:bg-black-custom hover:border-black-custom hover:text-red-custom md:py-4 md:text-lg md:px-10 transition duration-300">
                                 Odeslat
                             </button>
-                        </div>
+                        </div> --}}
 
                     </form>
                 </div>

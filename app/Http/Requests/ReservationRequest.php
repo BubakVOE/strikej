@@ -26,9 +26,10 @@ class ReservationRequest extends FormRequest
         return [
             'firstName' => 'required',
             'lastName' => 'required',
-            'mobile' => 'required|numeric',
-            'datum' => 'required',
             'email' => 'required|email',
+            'phone' => 'required|numeric',
+            'car' => 'required',
+            'type' => 'required',
         ];
     }
 
@@ -38,12 +39,13 @@ class ReservationRequest extends FormRequest
         return[
             'firstName.required' => 'firstName je požadováno',
             'lastName.required' => 'lastName je požadováno',
-            
-            'mobile.required' => 'Číslo je požadováno',
-            'mobile.numeric' => 'Číslo musí obsahovat pouze čísla',
-            // 'mobile.max' => 'Maximálně 9 ciferné číslo',
-            'datum.required' => 'datum je požadováno',
             'email.required' => 'email je požadováno',
+            
+            'phone.required' => 'Číslo je požadováno',
+            'phone.numeric' => 'Číslo musí obsahovat pouze čísla',
+            // 'mobile.max' => 'Maximálně 9 ciferné číslo',
+            'car.required' => 'car je požadováno',
+            'type.required' => 'type je požadováno',
         ];
     }
 }
