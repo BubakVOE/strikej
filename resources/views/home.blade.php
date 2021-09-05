@@ -21,15 +21,19 @@
     </div>
 
     
+    <section class="my-32">
+        <div class="my-10">
+            <x-home-introduction/>
+        </div>
+    
+        <div class="mt-28">
+            <x-home-offers/>
+        </div>
+    </section>
 
-    <div class=" my-32">
-        <x-home-introduction/>
-    </div>
 
-    <div class="mb-9">
-        <x-home-offers/>
-    </div>
 
+    <x-footer/>
 
 
 </body>
