@@ -1,4 +1,4 @@
-<nav class="xl:py-2 ">
+<nav class="xl:py-2 bg-gray-old ">
     <div class="w-10/12 mx-auto px-2 sm:px-6 lg:px-8 ">
         <div class="relative flex items-center justify-between h-16">
             {{-- pro mobil --}}

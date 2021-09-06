@@ -15,15 +15,16 @@
 </head>
 <body class="bg-gray-light">
     
-    <div class="bg-gray-old ">
+    <div>
         <x-home-navbar/>
     </div>
 
-    <div class="flex flex-col w-10/12 m-auto my-1/12">
-        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                <div class="shadow overflow-hidden  sm:rounded-lg">
-                    <table class="min-w-full divide-y divide-gray-200">
+    <section class="my-1/12">
+        <div class="flex flex-col w-10/12 m-auto ">
+            <div class="align-middle inline-block min-w-full ">
+                <div class="overflow-hidden rounded-lg">
+                    <table class="min-w-full divide-y-2 divide-gray-200">
+    
                         <thead class="bg-gray-medium">
                             <tr>
                                 <th scope="col" class="px-6 py-3 text-center text-sm font-poppins font-medium text-white uppercase tracking-wider">
@@ -43,8 +44,9 @@
                                 </th>
                             </tr>
                         </thead>
+    
                         <tbody class="bg-gray-old divide-y divide-gray-400">
-
+    
                             <x-cenik-type 
                                 carType='osobní auto' 
                                 carExamples='Kizashi Octavia, Superb, Mondeo, Passat'
@@ -53,7 +55,7 @@
                                 priceGum='3200 kč'
                                 priceClear='1500 kč'
                             />
-
+    
                             <x-cenik-type 
                                 carType='SUV' 
                                 carExamples='FeelsGodMan lul lulw omegaLUl clueless'
@@ -62,8 +64,7 @@
                                 priceGum='3500 kč'
                                 priceClear='2000 kč'
                             />
-
-
+    
                             <x-cenik-type 
                                 carType='osobní auto' 
                                 carExamples='FeelsGodMan lul lulw omegaLUl clueless'
@@ -72,8 +73,7 @@
                                 priceGum='3500 kč'
                                 priceClear='2000 kč'
                             />
-
-
+    
                             <x-cenik-type 
                                 carType='pickUp' 
                                 carExamples='FeelsGodMan lul lulw omegaLUl clueless'
@@ -82,15 +82,14 @@
                                 priceGum='3500 kč'
                                 priceClear='2000 kč'
                             />
-
-            
-                        <!-- More people... -->
+    
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
     <x-footer/>
   

@@ -16,13 +16,13 @@
 
 <body class="bg-gray-light">
     
-    <div class="bg-gray-old ">
+    <div>
         <x-home-navbar/>
     </div>
 
     
     <section class="my-10 xl:my-32">
-        <div class="xl:my-10">
+        <div class="">
             <x-home-introduction/>
         </div>
     
@@ -31,10 +31,7 @@
         </div>
     </section>
 
-
-
     <x-footer/>
-
 
 </body>
 

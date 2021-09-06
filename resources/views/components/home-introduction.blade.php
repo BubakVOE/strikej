@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="mySlides  min-h-80 aspect-w-1 aspect-h-1 rounded-md overflow-hidden lg:h-80 lg:aspect-none">
-                    <img class="w-full" src="{{ asset('img/introduction/wheel.png') }}" alt="">
+                    <img class="w-10/12 h-10/12 m-auto xl:w-full" src="{{ asset('img/introduction/wheel.png') }}" alt="">
                 </div>
 
             </div>
