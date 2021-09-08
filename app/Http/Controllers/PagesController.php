@@ -8,19 +8,19 @@ use App\Models\Post;
 
 class PagesController extends Controller
 {
-    public function asd()
+    public function domu()
     {
-        return view('homess');
+        return view('domu');
     }
 
     
     public function galerie()
     {
 
-        $thumbnails = Post::all();
+        $Posts = Post::all();
 
         return view('pages.galerie', [
-            'thumbnails' => $thumbnails,
+            'Posts' => $Posts,
         ]);
     }
 

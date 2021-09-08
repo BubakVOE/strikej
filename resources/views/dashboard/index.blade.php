@@ -1,52 +1,47 @@
-@extends('layouts.dasboard')
+@extends('layouts.app')
 
-@section('container')
-
-    <div>
-        <div class="flex justify-center items-center my-15 h-20">
+@section('content')
+    <div class="relative">
+        <div class="absolute top-20 left-1/2 flex justify-center items-center my-15 h-20">
             @if (session()->has('message'))
                 <div class="">
-                    <h1 class="font-poppins bg-red-custom rounded-lg py-2 px-3">
+                    <h1 class="font-poppins bg-green-500 rounded-lg py-2 px-3">
                         {{ session()->get('message') }}
                     </h1>
                 </div>
             @endif
         </div>
 
+        {{-- Objednávky online --}}
+        <div class="w-10/12 mx-auto ">
+            <h1 class="text-xl font-poppins font-bold mb-3">Objednávky online</h1>
 
-{{-- Objednávky online --}}
-        <div class="w-11/12 mx-auto">
-            <h1 class="text-xl font-poppins font-bold text-cool-gray-300 mb-3">Objednávky online</h1>
-
-
-            <div class="bg-gray-light w-full m-auto">
-                <div class="grid grid-cols-8  py-5 place-items-center font-bold font-poppins border-b-2 border-gray-medium">
+            <div class="bg-gray-medium w-full m-auto">
+                <div class="grid grid-cols-7  py-5 place-items-center font-bold font-poppins border-b-2 border-gray-light text-white">
                     <h1>ID</h1>
                     <h1>Jméno</h1>
                     <h1>telefonní číslo</h1>
-                    <div class="flex flex-col items-center justify-center">
+                    {{-- <div class="flex flex-col items-center justify-center">
                         <h1>datum</h1>
-                        <h1 class="font-light text-xs">den/měsíc/rok</h1>
-                    </div>
+                        <h1 class="font-light text-xs text-gray-500">den/měsíc/rok</h1>
+                    </div> --}}
                     
                     <h1>E-mail</h1>
                     <h1>auto</h1>
                     <h1>typ</h1>
                     <div class="flex flex-col items-center justify-center">
                         <h1>Upravy</h1>
-                        <h1 class="font-light text-xs">smazat / hotovo</h1>
+                        <h1 class="font-light text-xs text-gray-500">smazat / hotovo</h1>
                     </div>
                 </div>
 
-                <div class="">
                     @foreach ($reservation as $reserve)
-
                         @if ($reserve->done == 0)
-                            <div class="grid grid-cols-8 place-items-center font-poppins text-sm py-4 border-b border-gray-medium">
+                            <div class="grid grid-cols-7 place-items-center font-poppins text-sm py-4 border-b border-gray-light text-white">
                                 <h1 class="">{{ $reserve->id }}</h1>
                                 <h1>{{ $reserve->firstName }} {{ $reserve->lastName }}</h1>
                                 <h1>{{ $reserve->mobile }}</h1>
-                                <h1>{{ date('jS M Y', strtotime($reserve->datum)) }}</h1>
+                                {{-- <h1>{{ date('jS M Y', strtotime($reserve->datum)) }}</h1> --}}
                                 <h1>{{ $reserve->email }}</h1>
                                 <h1>{{ $reserve->car }}</h1>
                                 <h1>{{ $reserve->type }}</h1>
@@ -74,7 +69,6 @@
                             </div>
                         @endif
                     @endforeach
-                </div>
             </div>
 
 
@@ -82,15 +76,15 @@
                 <div>
                     <h1 class="text-base font-poppins font-bold text-cool-gray-300 mb-3">Hotové objednávky</h1>
 
-                    <div class="bg-gray-light  w-full m-auto">
-                        <div class="grid grid-cols-8  py-5 place-items-center font-bold font-poppins border-b-2 border-gray-medium">
+                    <div class="bg-gray-medium w-full m-auto">
+                        <div class="grid grid-cols-7  py-5 place-items-center font-bold font-poppins border-b-2 border-gray-light text-white">
                             <h1>ID</h1>
                             <h1>Jméno</h1>
                             <h1>telefonní číslo</h1>
-                            <div class="flex flex-col items-center justify-center">
+                            {{-- <div class="flex flex-col items-center justify-center">
                                 <h1>datum</h1>
                                 <h1 class="font-light text-xs">den/měsíc/rok</h1>
-                            </div>
+                            </div> --}}
                             
                             <h1>E-mail</h1>
                             <h1>auto</h1>
@@ -104,11 +98,11 @@
                         <div class="">
                             @foreach ($reservation as $reserve)
                                 @if ($reserve->done == 1)
-                                <div class="grid grid-cols-8 place-items-center font-poppins text-sm py-4 border-b border-gray-medium">
+                                <div class="grid grid-cols-7 place-items-center font-poppins text-sm py-4 border-b border-gray-light text-white">
                                     <h1 class="">{{ $reserve->id }}</h1>
                                         <h1>{{ $reserve->firstName }} {{ $reserve->lastName }}</h1>
-                                        <h1>{{ $reserve->mobile }}</h1>
-                                        <h1>{{ date('jS M Y', strtotime($reserve->datum)) }}</h1>
+                                        <h1>{{ $reserve->phone }}</h1>
+                                        {{-- <h1>{{ date('jS M Y', strtotime($reserve->datum)) }}</h1> --}}
                                         <h1>{{ $reserve->email }}</h1>
                                         <h1>{{ $reserve->car }}</h1>
                                         <h1>{{ $reserve->type }}</h1>
@@ -117,7 +111,7 @@
                                             <form action="/dashboard/reserve/delete/{{ $reserve->id }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button class="mr-1 bg-red-custom px-3 py-2 rounded-md text-base hover:text-orange-200" type="submit" >
+                                                <button class="bg-red-custom px-3 py-2 rounded-md text-base hover:text-orange-200" type="submit" >
                                                     smazat
                                                 </button>
                                             </form>
@@ -134,18 +128,15 @@
             
         </div>
 
-
-        <hr class="my-1/12 border-b-2 border-gray-light">
-
-{{-- fotogalerie --}}
-        <div class="w-11/12 mx-auto ">
+    {{-- fotogalerie --}}
+        <div class="w-10/12 mx-auto mt-1/12 ">
             <div class=" flex flex-row items-center justify-between w-full mb-3 ">
                 <h1 class="text-xl font-poppins font-bold text-cool-gray-300 ">Fotogalerie</h1>
                 <a class="bg-red-custom rounded-xl font-bold px-2 py-3 text-center relative right-1/2 transform translate-x-1/2" href="{{ route('galerie.create') }}">přidat fotogalerie</a>
             </div>
 
-            <div class="bg-gray-light w-full m-auto">
-                <div class="grid grid-cols-7  py-5 place-items-center  font-bold font-poppins border-b-2 border-gray-medium">
+            <div class="bg-gray-medium w-full m-auto">
+                <div class="grid grid-cols-7  py-5 place-items-center  font-bold font-poppins border-b-2 border-gray-light text-white">
                     <h1>ID</h1>
                     <h1>Název</h1>
                     <h1>Značka</h1>
@@ -161,64 +152,59 @@
                         <h1>Upravy</h1>
                         <h1 class="font-light text-xs">upravit / hotovo</h1>
                     </div>
-
                 </div>
             {{-- foreach atd... --}}
-                <div class="">
-                    @foreach ($posts as $post)
-                        <div class="grid grid-cols-7 place-items-center border-b-2 border-gray-medium py-2">
+                @foreach ($posts as $post)
+                    <div class="grid grid-cols-7 place-items-center border-b-2 border-gray-light py-2 text-white">
 
-                            <h1>{{ $post->id }}</h1>
+                        <h1>{{ $post->id }}</h1>
 
-                            <h1>{{ $post->car }}</h1>
+                        <h1>{{ $post->car }}</h1>
 
-                            <h1>{{ $post->type }}</h1>
+                        <h1>{{ $post->type }}</h1>
 
-                            <p class="overflow-auto text-white w-52 m-auto text-center " >{{ $post->description }}</p>
+                        <p class="overflow-auto w-52 m-auto text-center " >{{ $post->description }}</p>
 
-                            <img src="posts/thumbNail/{{ $post->cover }}" style="max-height:100px; max-width:100px" >
+                        <img src="posts/thumbNail/{{ $post->cover }}" style="max-height:100px; max-width:100px" >
 
-                            <div class="flex flex-col justify-center items-center">
+                        <div class="flex flex-col justify-center items-center">
 
-                                <div class="flex items-center text-sm">
-                                    <h1 class="mr-2">vytvořeno</h1>
-                                    <h1>{{ date('jS M Y', strtotime($post->created_at)) }}</h1>
-
-                                </div>
-
-                                <div class="flex items-center text-sm">
-                                    <h1 class="mr-2">upraveno</h1>
-                                    <h1 class="text-sm">{{ date('jS M Y', strtotime($post->updated_at)) }}</h1>
-                                </div>
+                            <div class="flex items-center text-sm ">
+                                <h1 class="mr-2">vytvořeno</h1>
+                                <h1>{{ date('jS M Y', strtotime($post->created_at)) }}</h1>
 
                             </div>
 
-                            <div class=" flex flex-row">
-                                <a href="/dashboard/post/edit/{{ $post->id }}" class="rounded-l-md bg-blue-light text-gray-light mr-2 p-2 font-bold">upravit</a>
-
-                                <form action="/dashboard/post/delete/{{ $post->id }}" method="post">
-                                    @csrf
-                                    @method('delete')
-    
-                                    <button type="submit" class="rounded-r-md bg-red-custom text-gray-light ml-2 p-2 font-bold">smazat</button>
-                                </form>
-
+                            <div class="flex items-center text-sm ">
+                                <h1 class="mr-2">upraveno</h1>
+                                <h1 class="text-sm">{{ date('jS M Y', strtotime($post->updated_at)) }}</h1>
                             </div>
+
                         </div>
-                    @endforeach
-                </div>
+
+                        <div class=" flex flex-row  text-white ">
+                            <a href="/dashboard/post/edit/{{ $post->id }}" class="rounded-l-md bg-blue-light mr-1 p-2 font-bold">upravit</a>
+
+                            <form action="/dashboard/post/delete/{{ $post->id }}" method="post">
+                                @csrf
+                                @method('delete')
+
+                                <button type="submit" class="rounded-r-md bg-red-custom ml-1 p-2 font-bold">smazat</button>
+                            </form>
+
+                        </div>
+                    </div>
+                @endforeach
             </div>
 
         </div>
 
-
-        <hr class="my-1/12 border-b-2 border-gray-light">
-
         
 
     </div>
-
 @endsection
+
+
 
 {{-- 
 <div class="flex flex-row justify-between w-10/12 mx-auto mt-1/12 ">

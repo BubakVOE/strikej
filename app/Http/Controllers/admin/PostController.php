@@ -9,11 +9,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 
 
-
 class PostController extends Controller
 {
-
-
     public function create()
     {
         return view('dashboard.post.create');
@@ -121,7 +118,7 @@ class PostController extends Controller
        return back();
    }
 // delete thumbnail
-    public function deletecover($id)
+    public function deleteThumbnail($id)
     {
         $cover=Post::findOrFail($id)->cover;
         
@@ -154,5 +151,4 @@ class PostController extends Controller
 
 
    }
-
 }

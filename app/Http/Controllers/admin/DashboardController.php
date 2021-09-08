@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Models\Reservation;
-use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Models\Reservation;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
@@ -19,6 +20,4 @@ class DashboardController extends Controller
             'posts' => $post,
         ]);
     }
-
 }
-

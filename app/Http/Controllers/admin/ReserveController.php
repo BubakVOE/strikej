@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 
 class ReserveController extends Controller
 {
-
     public function delete($id)
     {
         $test = Reservation::find($id);
@@ -32,6 +31,4 @@ class ReserveController extends Controller
         };
 
     }
-
-
 }
