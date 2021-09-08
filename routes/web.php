@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PosterController;
 use App\Http\Controllers\ReservatorController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ Route::delete('/dashboard/post/deleteThumbnail/{id}',[PostController::class,'del
 
 
 // public
-route::get('/', [PagesController::class, 'home'])->name('home');
+route::get('/asd', [PagesController::class, 'asd'])->name('asd');
 route::get('/galerie', [PagesController::class, 'galerie'])->name('home-galerie');
 route::get('/cenik', [PagesController::class, 'cenik'])->name('home-cenik');
 route::get('/kontakt', [PagesController::class, 'kontakt'])->name('home-kontakt');
@@ -47,3 +48,14 @@ route::get('/kontakt', [PagesController::class, 'kontakt'])->name('home-kontakt'
 route::post('/reserve', [ReservatorController::class, 'store'])->name('reservation');
 
 route::get('/post/show/{id}', [PosterController::class, 'show']);
+
+
+
+Auth::routes();
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

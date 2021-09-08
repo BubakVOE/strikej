@@ -8,9 +8,9 @@ use App\Models\Post;
 
 class PagesController extends Controller
 {
-    public function home()
+    public function asd()
     {
-        return view('home');
+        return view('homess');
     }
 
     
