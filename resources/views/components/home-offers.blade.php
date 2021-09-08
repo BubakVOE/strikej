@@ -1,7 +1,7 @@
 <div class="w-10/12 m-auto space-y-2 lg:space-y-0 flex flex-col items-center justify-center xl:flex xl:flex-row xl:justify-evenly lg:flex lg:flex-row lg:justify-between lg:items-center lg:text-center">
     <div class="w-full flex justify-center  ">
-        <div class="flex justify-center items-center bg-gray-old rounded-md w-40 h-40 xl:w-60 xl:h-60 ">
-            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-gray-old text-red-custom hover:bg-gray-medium transition duration-300 ">
+        <div class="flex justify-center items-center rounded-md w-40 h-40 xl:w-60 xl:h-60 ">
+            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 ">
 
                 <span class="flex flex-col justify-center items-center">
                     <span>
@@ -19,8 +19,8 @@
     </div>
 
     <div class="w-full flex justify-center">
-        <div class="flex justify-center items-center bg-gray-old rounded-md w-40 h-40 xl:w-60 xl:h-60 ">
-            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-gray-old text-red-custom hover:bg-gray-medium transition duration-300 ">
+        <div class="flex justify-center items-center rounded-md w-40 h-40 xl:w-60 xl:h-60 ">
+            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 ">
 
                 <span class="flex flex-col justify-center items-center">
                     <span>
@@ -39,7 +39,7 @@
 
     <div class="w-full flex justify-center">
         <div class="flex justify-center items-center rounded-md w-40 h-40 xl:w-60 xl:h-60 ">
-            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-gray-old text-red-custom hover:bg-gray-medium transition duration-300 ">
+            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 ">
 
                 <span class="flex flex-col justify-center items-center">
                     <span>

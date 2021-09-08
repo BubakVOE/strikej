@@ -14,12 +14,12 @@
 
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center xl:justify-start">
                 <div class="rounded-md shadow">
-                    <a href="/kontakt" class="w-full flex items-center justify-center px-8 py-3  border-transparent text-base font-medium rounded-md text-black-custom bg-red-custom border-2 border-gray-old hover:bg-black-custom hover:border-black-custom hover:text-red-custom md:py-4 md:text-lg md:px-10 transition duration-300">
+                    <a href="/kontakt" class="w-full flex items-center justify-center px-8 py-3 border-2 border-transparent text-base font-medium rounded-md text-black-custom bg-red-custom border-gray-old hover:bg-black-custom hover:border-black-custom hover:text-red-custom md:py-4 md:text-lg md:px-10 transition duration-300">
                     Rezervovat
                     </a>
                 </div>
                 <div class="mt-3 sm:mt-0 sm:ml-3">
-                    <a href="/galerie" class="w-full border-2 flex items-center justify-center px-8 py-3  border-transparent text-base font-medium rounded-md bg-gray-old hover:bg-gray-medium text-red-500 hover:text-red-custom  md:py-4 md:text-lg md:px-10 transition duration-300">
+                    <a href="/galerie" class="w-full flex items-center justify-center px-8 py-3 border-2 border-transparent text-base font-medium rounded-md text-red-custom bg-black-custom hover:bg-gray-medium hover:text-red-custom  md:py-4 md:text-lg md:px-10 transition duration-300">
                     Galerie
                     </a>
                 </div>

@@ -25,36 +25,53 @@
                 <div class="hidden sm:block sm:ml-6  w-full ">
                     <div class="flex justify-evenly space-x-2 items-center xl:h-full xl:w-5/12 xl:m-auto py-3 ">
 
-                        <div class="{{ active(['/']) }} flex items-center hover:bg-gray-medium hover:text-red-300 space-x-2 text-red-500 px-3 text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-custom hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                            </svg>
-
-                            <a href="{{ route('domu') }}" class="font-montserrat py-2 rounded-md text-lg font-medium">Domů</a>
-
-                        </div>
-
-                        <div class="{{ active(['galerie', '/galerie/*']) }} flex items-center hover:bg-gray-medium hover:text-red-300 space-x-2 text-red-500 px-3 text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-custom hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <a href="{{ route('galerie') }}" class="font-montserrat py-2 rounded-md text-lg font-medium">Galerie</a>    
-                        </div>
-
-                        <div class="{{ active(['cenik', '/cenik/*']) }} flex items-center hover:bg-gray-medium hover:text-red-300 space-x-2 text-red-500 px-3 text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-custom hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
+                        <div class="{{ active(['/']) }}  hover:bg-gray-medium hover:text-red-300  text-red-500 text-center ">
                             
-                            <a href="{{ route('cenik') }}" class="font-montserrat py-2 rounded-md text-lg font-medium">Ceník</a>
+
+                            <a href="{{ route('domu') }}" class="flex items-center px-3 font-montserrat py-2 rounded-md text-lg font-medium space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-custom hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                <span>Domů</span>
+                            </a>
+
+                        </div>
+
+                        <div class="{{ active(['galerie', '/galerie/*']) }}  hover:bg-gray-medium hover:text-red-300  text-red-500 text-center">
+
+                            <a href="{{ route('galerie') }}" class="flex items-center px-3 font-montserrat py-2 rounded-md text-lg font-medium space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-custom hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+
+                                <span>Galerie</span>
+                            </a> 
+
+                        </div>
+
+                        <div class="{{ active(['cenik', '/cenik/*']) }}  hover:bg-gray-medium hover:text-red-300  text-red-500 text-center">
+
+                            
+                            <a href="{{ route('cenik') }}" class="flex items-center px-3 font-montserrat py-2 rounded-md text-lg font-medium space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-custom hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span>Ceník</span>
+                            </a>
                         </div>
                         
-                        <div class="{{ active(['kontakt', '/kontakt*']) }}  flex items-center hover:bg-gray-medium hover:text-red-300 space-x-2 text-red-500 px-3 text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-custom hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                            </svg>
-                            
-                            <a href="{{ route('kontakt') }}" class="font-montserrat py-2 rounded-md text-lg font-medium">Kontakt</a>
+                        <div class="{{ active(['kontakt', '/kontakt*']) }}  hover:bg-gray-medium hover:text-red-300  text-red-500  text-center">
+                            <a href="{{ route('kontakt') }}" class="flex items-center px-3 font-montserrat py-2 rounded-md text-lg font-medium space-x-2">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-custom hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+
+                                <span>
+                                    Kontakt
+                                </span>
+
+                            </a>
                         </div>
                         
                         @auth
@@ -64,25 +81,45 @@
                     </div>
                 </div>
 
-                            
-                <div class="hidden sm:grid sm:justify-items-end  sm:w-5/12 ">
+                @auth
                     <div class="flex items-center">
-                        <h1 class="sm:hidden lg:block sm:text-xs lg:text-base font-montserrat text-gray-300 font-medium">+420 730 681 670</h1>
+                        <a href="{{ route('logout') }}"
+                            class="bg-blue-light px-2 py-2 rounded-lg"
+                            onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                            <h1>Logout</h1>
+                        </a>
+                
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                            {{ csrf_field() }}
+                        </form>
+                    </div>
+                @endauth
 
-                        <div class="hidden md:flex flex-col pl-5 ">
-                            <div class="bg-gray-500 bg-gradient-to-br hover:from-purple-700 hover:to-pink-400 rounded-full my-1">
-                                <a href="">
-                                    <img class="sm:w-5 sm:h-5" src="{{ asset('img/socialmedia/instagram.png') }}">
-                                </a>
-                            </div>
-                            <div class="bg-gray-500 hover:bg-blue-700 rounded-full my-1">
-                                <a href="">
-                                    <img class="sm:w-5 sm:h-5" src="{{ asset('img/socialmedia/facebook.png') }}">
-                                </a>
+                
+                @guest()
+                    <div class="hidden sm:grid sm:justify-items-end  sm:w-5/12 ">
+                        <div class="flex items-center">
+                            <h1 class="sm:hidden lg:block sm:text-xs lg:text-base font-montserrat text-gray-300 font-medium">+420 730 681 670</h1>
+
+                            <div class="hidden md:flex flex-col pl-5 ">
+                                <div class="bg-gray-500 bg-gradient-to-br hover:from-purple-700 hover:to-pink-400 rounded-full my-1">
+                                    <a href="">
+                                        <img class="sm:w-5 sm:h-5" src="{{ asset('img/socialmedia/instagram.png') }}">
+                                    </a>
+                                </div>
+                                <div class="bg-gray-500 hover:bg-blue-700 rounded-full my-1">
+                                    <a href="">
+                                        <img class="sm:w-5 sm:h-5" src="{{ asset('img/socialmedia/facebook.png') }}">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endguest
+
+
+
 
 
 

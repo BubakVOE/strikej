@@ -1,84 +1,83 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
-    <div class="flex">
-        <div class="w-full">
-            <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
-                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                    {{ __('Login') }}
-                </header>
 
-                <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST" action="{{ route('login') }}">
-                    @csrf
-
-                    <div class="flex flex-wrap">
-                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('E-Mail Address') }}:
-                        </label>
-
-                        <input id="email" type="email"
-                            class="form-input w-full @error('email') border-red-500 @enderror" name="email"
-                            value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                        @error('email')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
-                        </p>
-                        @enderror
+    <div class="h-6/12 flex items-center">
+        <div class="w-6/12 flex items-center justify-center m-auto bg-gray-medium rounded-xl">
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+                
+                <div class=''>
+                    <div class="text-center flex flex-col items-center justify-center py-4 border-b-2 border-gray-light ">
+                        <h1 class="text-lg font-poppins text-white">Přihlásit se</h1>
                     </div>
 
-                    <div class="flex flex-wrap">
-                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('Password') }}:
-                        </label>
+                    <div class="flex justify-center">
+                        <div class="px-4 py-6">
 
-                        <input id="password" type="password"
-                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"
-                            required>
+                            <div class=" items-center justify-between mb-5">
+                                <div class="flex items-end">
+                                    <div class="flex flex-col font-bold w-4/6 px-2">
+                                        <label for="email" class="block text-white text-sm font-bold mb-2 sm:mb-4">
+                                            <h1>E-mail</h1>
+                                        </label>
+                                        
+                                        <input  id="email" 
+                                                type="email"
+                                                class="py-2 px-5 rounded focus:outline-none text-cool-gray-600 focus:text-black-custom  @error('email') border-red-custom @enderror"
+                                                placeholder="pavelnovak@seznam.cz"
+                                                name="email"
+                                                required autocomplete="email" autofocus>
+            
+                                        @error('email')
+                                        <p class="text-red-custom text-xs italic mt-28 absolute">
+                                            {{ $message }}
+                                        </p>
+                                        @enderror
+                                    </div>
+                                    
+                                    <div class="flex flex-col font-bold w-4/6 px-2">
+                                        <label for="password" class="block text-white  text-sm font-bold mb-2 sm:mb-4">
+                                            <h1>Heslo</h1>
+                                        </label>
+                
+                                        <input  type="password"
+                                                class="py-2 px-5 rounded focus:outline-none text-cool-gray-600 focus:text-black-custom  @error('password') border-red-custom @enderror""
+                                                placeholder="******"
+                                                name="password"
+                                                required autocomplete="password" 
+                                                autofocus
+                                                required                       
+                                            >
+                
+                                        @error('password')
+                                        <p class="text-red-custom text-xs italic mt-4">
+                                            {{ $message }}
+                                        </p>
+                                        @enderror
+                                    </div>
 
-                        @error('password')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
-                        </p>
-                        @enderror
+                                    <div class="flex justify-center">
+                                        <button type="submit" class="ml-7 px-4 py-2 text-lg rounded-xl  focus:outline-none bg-red-custom text-white font-bold">
+                                                <h1>login</h1>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="flex items-center">
-                        <label class="inline-flex items-center text-sm text-gray-700" for="remember">
-                            <input type="checkbox" name="remember" id="remember" class="form-checkbox"
-                                {{ old('remember') ? 'checked' : '' }}>
-                            <span class="ml-2">{{ __('Remember Me') }}</span>
-                        </label>
-
-                        @if (Route::has('password.request'))
-                        <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline hover:underline ml-auto"
-                            href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                        @endif
-                    </div>
-
-                    <div class="flex flex-wrap">
-                        <button type="submit"
-                        class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
-                            {{ __('Login') }}
-                        </button>
-
-                        @if (Route::has('register'))
-                        <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">
-                            {{ __("Don't have an account?") }}
-                            <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline" href="{{ route('register') }}">
-                                {{ __('Register') }}
-                            </a>
-                        </p>
-                        @endif
-                    </div>
-                </form>
-
-            </section>
+                </div>
+            </form>
         </div>
     </div>
-</main>
+
+
 @endsection
+
+
+
+
+    
+</body>
+</html>
