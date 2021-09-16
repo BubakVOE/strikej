@@ -1,7 +1,7 @@
 <div class="w-10/12 m-auto space-y-2 lg:space-y-0 flex flex-col items-center justify-center xl:flex xl:flex-row xl:justify-evenly lg:flex lg:flex-row lg:justify-between lg:items-center lg:text-center">
     <div class="w-full flex justify-center  ">
         <div class="flex justify-center items-center rounded-md w-40 h-40 xl:w-60 xl:h-60 ">
-            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 ">
+            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 border-2 border-black-custom ">
 
                 <span class="flex flex-col justify-center items-center">
                     <span>
@@ -10,7 +10,7 @@
                         </svg>
                     </span>
 
-                    <span class="mt-2">
+                    <span class="mt-2 font-poppins">
                         Nástříky
                     </span>
                 </span>
@@ -20,7 +20,7 @@
 
     <div class="w-full flex justify-center">
         <div class="flex justify-center items-center rounded-md w-40 h-40 xl:w-60 xl:h-60 ">
-            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 ">
+            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 border-2 border-black-custom  ">
 
                 <span class="flex flex-col justify-center items-center">
                     <span>
@@ -29,7 +29,7 @@
                         </svg>
                     </span>
 
-                    <span class="mt-2">
+                    <span class="mt-2 font-poppins">
                         Přezutí gum
                     </span>
                 </span>
@@ -39,7 +39,7 @@
 
     <div class="w-full flex justify-center">
         <div class="flex justify-center items-center rounded-md w-40 h-40 xl:w-60 xl:h-60 ">
-            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 ">
+            <a href="" class="relative w-full h-full flex justify-center pb-full rounded-xl bg-red-custom text-black-custom hover:text-red-custom hover:bg-black-custom transition duration-300 border-2 border-black-custom ">
 
                 <span class="flex flex-col justify-center items-center">
                     <span>
@@ -48,7 +48,7 @@
                         </svg>
                     </span>
 
-                    <span class="mt-2">
+                    <span class="mt-2 font-poppins">
                         Vyčistění auta
                     </span>
                 </span>

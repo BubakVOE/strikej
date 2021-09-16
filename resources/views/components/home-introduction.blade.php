@@ -45,7 +45,7 @@
 
             </div>
 
-            <div class="flex justify-evenly w-60 m-auto xl:w-full bg-gray-old py-2 px-3 rounded-md mt-5 ">
+            <div class="flex justify-evenly w-60 m-auto xl:w-full bg-gray-400 py-3 rounded-md mt-5 ">
                 <span class="dot bg-red-custom px-5 py-1 rounded-xl"></span> 
                 <span class="dot bg-red-custom px-5 py-1 rounded-xl"></span> 
                 <span class="dot bg-red-custom px-5 py-1 rounded-xl"></span> 
